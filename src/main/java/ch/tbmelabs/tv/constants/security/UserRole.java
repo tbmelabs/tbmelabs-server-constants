@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.shared.constants.security;
+package ch.tbmelabs.tv.constants.security;
 
 public class UserRole {
 

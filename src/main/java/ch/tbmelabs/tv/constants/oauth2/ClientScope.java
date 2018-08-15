@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.shared.constants.oauth2;
+package ch.tbmelabs.tv.constants.oauth2;
 
 public class ClientScope {
 
