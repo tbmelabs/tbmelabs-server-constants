@@ -36,15 +36,15 @@ addons:
       secure: ${SONAR_TOKEN}
 
 before_script:
-  - git clone https://bbortt:${GITHUB_ACCESS_TOKEN}@github.com/mirioeggmann/tbmelabs-deploy-keys.git
-  - gpg --fast-import tbmelabs-deploy-keys/codesigning.asc
+  - git clone https://bbortt:${GITHUB_ACCESS_TOKEN}@github.com/mirioeggmann/tbmelabs-deploy-certificates.git
+  - gpg --fast-import tbmelabs-deploy-certificates/tbmelabs-deploy-key.asc
   - cp .travis.settings.xml $HOME/.m2/settings.xml
 
 script:
   - scripts/deploy.sh
 
 after_script:
-  - rm -rf tbmelabs-deploy-keys
+  - rm -rf tbmelabs-deploy-certificates
 
 cache:
   directories:
