@@ -14,6 +14,16 @@ branches:
   - master
   - development
 
+deploy:
+  - provider: script
+    script: bash scripts/deploy.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash scripts/deploy-snapshot.sh
+    on:
+      branch: development
+
 env:
   global:
     - secure: "mRTPwCaebEbKQEr5vyvvO4UtwwKuBFRlu+vKYUEeBEWygc4UOLgL3qjg+5Qtj2v44zq25+xvn2FH+MqBtN7PUr4TGQRlzaPLDhRPUipHqytT20P72YOHj1D9S86n3yEPXz7F4NKYY/wd2cJAPRU3TovMjA6TZ39KeGOvst5eHBbZAA7kz/RswpdpTqsWLdt2mkWMymsfReDBmn21eUpVYtGTeI6+h/y8U25LBHxF16tFWNBWMQn5d6DVPlqi6u0VhWjlSPAjA6VDjIK99w0YYActQ4mLXGiOq3YOG+DcT+zozARtLuRqE4hbhTKjMRnPadH1O+XAl4H5lrMGH5R05FMca83XMPRP11LgR6G/v5qfW8n7wwJGQpOsjaTFh0uQdbyr3QFbfqL+yhDTFFjW7qo2zvGtNjgduTo7/La1HTyFGwrHqgMMGzm9oOWEf2btGKG7ZEUsRDDmOxH85pWBxlRGPxf/uImVwWJUpJdnnSUlBGbsHGDU03PS37FY7zAOmM3A5ks7ye+zg7JWnqrZfkTOGcO3Gze9PTrqIMB0PXfzHFyXMsVKErX1EnGGAKqpAdsA2UbjGZaaAQMdtFQO8SSD0jl68Iqw/70Q8j8PaIhjcikqprIsNxSBZ+E71pcO9XvyGw2HnNFDFfyL4sml3jWy75TkwODY2vI8e3nivoE="
@@ -43,7 +53,8 @@ before_script:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
 
 script:
-  - scripts/deploy.sh
+  # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean verify
 
 after_script:
   - rm -rf tbmelabs-deploy-certificates
