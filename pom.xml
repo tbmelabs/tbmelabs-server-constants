@@ -48,6 +48,7 @@
     <org.mockito.mockito-core.version>2.9.0</org.mockito.mockito-core.version>
 
     <!-- Plugin configuration -->
+    <org.sonatype.plugins.nexus-staging-maven-plugin.version>1.6.8</org.sonatype.plugins.nexus-staging-maven-plugin.version>
     <org.apache.maven.plugins.maven-gpg-plugin.version>1.6</org.apache.maven.plugins.maven-gpg-plugin.version>
   </properties>
 
@@ -111,7 +112,10 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>${org.sonatype.plugins.nexus-staging-maven-plugin.version}</version>
+
         <extensions>true</extensions>
+
         <configuration>
           <serverId>ossrh</serverId>
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
