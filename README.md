@@ -35,18 +35,18 @@ This project is deployed using maven. Run `mvn clean install` to install the art
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/tbmelabs/tbme-tv/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/tbmelabs/tbmelabs-tv-constants/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tbmelabs/tbme-tv/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tbmelabs/tbmelabs-tv-constants/tags). 
 
 ## Authors
 
 * **Timon Borter** - *Initial work* - [bbortt](https://github.com/bbortt)
 
-See also the list of [contributors](https://github.com/tbmelabs/tbme-tv/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/tbmelabs/tbmelabs-tv-constants/contributors) who participated in this project.
 
 ## License
 
-This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/actuator-endpoints-security-utils/blob/development/LICENSE).
+This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/tbmelabs-tv-constants/blob/development/LICENSE).
