@@ -1,9 +1,9 @@
-# TBMELabs-TV-Constants
+# tbmelabs-server-constants
 
 Utilities to secure actuator endpoints.
 
-[![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-tv-constants.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-tv-constants)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/97793d6877aa4f09b964578481dc8275)](https://www.codacy.com/app/bbortt_2/tbmelabs-tv-constants?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tbmelabs/tbmelabs-tv-constants&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-server-constants.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-server-constants)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/97793d6877aa4f09b964578481dc8275)](https://www.codacy.com/app/bbortt_2/tbmelabs-server-constants?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tbmelabs/tbmelabs-server-constants&amp;utm_campaign=Badge_Grade)
 
 ## Getting Started
 
@@ -35,18 +35,18 @@ This project is deployed using maven. Run `mvn clean install` to install the art
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/tbmelabs/tbmelabs-tv-constants/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/tbmelabs/tbmelabs-server-constants/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tbmelabs/tbmelabs-tv-constants/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/tbmelabs/tbmelabs-server-constants/tags). 
 
 ## Authors
 
 * **Timon Borter** - *Initial work* - [bbortt](https://github.com/bbortt)
 
-See also the list of [contributors](https://github.com/tbmelabs/tbmelabs-tv-constants/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/tbmelabs/tbmelabs-server-constants/contributors) who participated in this project.
 
 ## License
 
-This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/tbmelabs-tv-constants/blob/development/LICENSE).
+This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/tbmelabs-server-constants/blob/development/LICENSE).
