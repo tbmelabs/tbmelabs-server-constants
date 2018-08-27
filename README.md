@@ -1,6 +1,6 @@
-# tbmelabs-server-constants
+# TBME Labs Server Constants
 
-Utilities to secure actuator endpoints.
+TBME Labs constant expressions used by servers.
 
 [![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-server-constants.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-server-constants)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/97793d6877aa4f09b964578481dc8275)](https://www.codacy.com/app/bbortt_2/tbmelabs-server-constants?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tbmelabs/tbmelabs-server-constants&amp;utm_campaign=Badge_Grade)
