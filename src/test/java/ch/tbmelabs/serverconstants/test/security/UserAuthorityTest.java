@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.constants.test.security;
+package ch.tbmelabs.serverconstants.test.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import org.junit.Test;
 
-import ch.tbmelabs.tv.constants.security.UserRole;
+import ch.tbmelabs.serverconstants.security.UserRole;
 
 public class UserAuthorityTest {
 

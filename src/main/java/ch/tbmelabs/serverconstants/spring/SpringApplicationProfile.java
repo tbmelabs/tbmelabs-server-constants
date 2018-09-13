@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.constants.spring;
+package ch.tbmelabs.serverconstants.spring;
 
 public class SpringApplicationProfile {
 

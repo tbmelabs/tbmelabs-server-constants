@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.constants.security;
+package ch.tbmelabs.serverconstants.security;
 
 public class ClientUserRole {
 

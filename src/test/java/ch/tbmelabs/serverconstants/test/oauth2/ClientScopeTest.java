@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.constants.test.oauth2;
+package ch.tbmelabs.serverconstants.test.oauth2;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import org.junit.Test;
 
-import ch.tbmelabs.tv.constants.oauth2.ClientScope;
+import ch.tbmelabs.serverconstants.oauth2.ClientScope;
 
 public class ClientScopeTest {
 

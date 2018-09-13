@@ -1,4 +1,4 @@
-package ch.tbmelabs.tv.constants.test.spring;
+package ch.tbmelabs.serverconstants.test.spring;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import org.junit.Test;
 
-import ch.tbmelabs.tv.constants.spring.SpringApplicationProfile;
+import ch.tbmelabs.serverconstants.spring.SpringApplicationProfile;
 
 public class SpringApplicationProfileTest {
 
