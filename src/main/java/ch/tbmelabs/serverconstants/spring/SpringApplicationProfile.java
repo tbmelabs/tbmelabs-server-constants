@@ -1,38 +1,44 @@
 package ch.tbmelabs.serverconstants.spring;
 
-public class SpringApplicationProfile {
+public enum SpringApplicationProfile {
 
   /**
    * Productive systems.
    */
-  public static final String PROD = "prod";
+  PROD("prod"),
 
   /**
    * Development profile with debug logs.
    */
-  public static final String DEV = "dev";
+  DEV("dev"),
 
   /**
    * Used while (maven) testing is active.
    */
-  public static final String TEST = "test";
+  TEST("test"),
 
   /**
    * Activates logging via Logstash and ELK stack.
    */
-  public static final String ELK = "elk";
+  ELK("elk"),
 
   /**
    * Disables caching via REDIS-Server.
    */
-  public static final String NO_REDIS = "no-redis";
+  NO_REDIS("no-redis"),
 
   /**
    * Disables Spring Mail configuration. For development use only.
    */
-  public static final String NO_MAIL = "no-mail";
+  NO_MAIL("no-mail");
 
-  private SpringApplicationProfile() {
-    // Hidden constructor
+  String name;
+
+  SpringApplicationProfile(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return this.name;
   }
 }

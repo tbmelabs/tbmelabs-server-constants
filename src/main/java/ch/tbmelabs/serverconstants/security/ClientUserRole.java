@@ -1,11 +1,29 @@
 package ch.tbmelabs.serverconstants.security;
 
-public class ClientUserRole {
+public enum ClientUserRole {
 
-  public static final String EUREKA_ROLE = "EUREKA";
-  public static final String ACTUATOR_ROLE = "ACTUATOR";
+  EUREKA_ENDPOINT(Long.valueOf(9), "EUREKA", "Eureka-Endpoint-User"),
+  ACTUATOR_ENDPOINT(Long.valueOf(10), "ACTUATOR", "Actuator-Endpoint-User");
 
-  private ClientUserRole() {
+  Long id;
+  String constant;
+  String name;
 
+  ClientUserRole(Long id, String constant, String name) {
+    this.id = id;
+    this.constant = constant;
+    this.name = name;
+  }
+
+  public Long getId() {
+    return this.id;
+  }
+
+  public String getConstant() {
+    return this.constant;
+  }
+
+  public String getName() {
+    return this.name();
   }
 }

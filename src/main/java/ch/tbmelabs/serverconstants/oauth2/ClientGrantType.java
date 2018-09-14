@@ -1,13 +1,25 @@
 package ch.tbmelabs.serverconstants.oauth2;
 
-public class ClientGrantType {
+public enum ClientGrantType {
 
-  public static final String AUTHORIZATION_CODE = "authorization_code";
-  public static final String REFRESH_TOKEN = "refresh_token";
-  public static final String IMPLICIT = "implicit";
-  public static final String PASSWORD = "password";
+  AUTHORIZATION_CODE(Long.valueOf(1), "authorization_code"),
+  REFRESH_TOKEN(Long.valueOf(2), "refresh_token"),
+  IMPLICIT(Long.valueOf(3), "implicit"),
+  PASSWORD(Long.valueOf(4), "password");
 
-  private ClientGrantType() {
-    // Hidden constructor
+  Long id;
+  String name;
+
+  ClientGrantType(Long id, String name) {
+    this.id = id;
+    this.name = name;
+  }
+
+  public Long getId() {
+    return this.id;
+  }
+
+  public String getName() {
+    return this.name;
   }
 }
