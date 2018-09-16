@@ -1,6 +1,6 @@
 package ch.tbmelabs.serverconstants.oauth2;
 
-public enum ClientScope {
+public enum ClientScopeEnum {
 
   READ(Long.valueOf(1), "read"),
   WRITE(Long.valueOf(2), "write"),
@@ -9,7 +9,7 @@ public enum ClientScope {
   Long id;
   String name;
 
-  ClientScope(Long id, String name) {
+  ClientScopeEnum(Long id, String name) {
     this.id = id;
     this.name = name;
   }
@@ -19,6 +19,6 @@ public enum ClientScope {
   }
 
   public String getName() {
-    return this.name();
+    return this.name;
   }
 }

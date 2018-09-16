@@ -1,6 +1,6 @@
 package ch.tbmelabs.serverconstants.spring;
 
-public enum SpringApplicationProfile {
+public enum SpringApplicationProfileEnum {
 
   /**
    * Productive systems.
@@ -18,11 +18,6 @@ public enum SpringApplicationProfile {
   TEST("test"),
 
   /**
-   * Activates logging via Logstash and ELK stack.
-   */
-  ELK("elk"),
-
-  /**
    * Disables caching via REDIS-Server.
    */
   NO_REDIS("no-redis"),
@@ -34,7 +29,7 @@ public enum SpringApplicationProfile {
 
   String name;
 
-  SpringApplicationProfile(String name) {
+  SpringApplicationProfileEnum(String name) {
     this.name = name;
   }
 

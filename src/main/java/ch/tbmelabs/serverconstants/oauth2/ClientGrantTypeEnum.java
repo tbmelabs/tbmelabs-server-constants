@@ -1,6 +1,6 @@
 package ch.tbmelabs.serverconstants.oauth2;
 
-public enum ClientGrantType {
+public enum ClientGrantTypeEnum {
 
   AUTHORIZATION_CODE(Long.valueOf(1), "authorization_code"),
   REFRESH_TOKEN(Long.valueOf(2), "refresh_token"),
@@ -10,7 +10,7 @@ public enum ClientGrantType {
   Long id;
   String name;
 
-  ClientGrantType(Long id, String name) {
+  ClientGrantTypeEnum(Long id, String name) {
     this.id = id;
     this.name = name;
   }
