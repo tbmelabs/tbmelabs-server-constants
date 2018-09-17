@@ -1,11 +1,13 @@
 package ch.tbmelabs.serverconstants.test.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.security.UserRoleConstants;
 import ch.tbmelabs.serverconstants.security.UserRoleEnum;
+import org.junit.Test;
 
 public class UserRoleConstantsTest {
+
   @Test
   public void gandalfShouldEqualEnumAuthority() {
     assertThat(UserRoleConstants.GANDALF).isEqualTo(UserRoleEnum.GANDALF.getAuthority());

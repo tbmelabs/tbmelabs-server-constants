@@ -1,8 +1,9 @@
 package ch.tbmelabs.serverconstants.test.oauth2;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.oauth2.ClientScopeEnum;
+import org.junit.Test;
 
 public class ClientScopeEnumTest {
 

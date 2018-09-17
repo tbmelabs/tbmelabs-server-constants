@@ -1,8 +1,9 @@
 package ch.tbmelabs.serverconstants.test.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.security.UserRoleEnum;
+import org.junit.Test;
 
 public class UserRoleEnumTest {
 

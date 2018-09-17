@@ -1,11 +1,13 @@
 package ch.tbmelabs.serverconstants.test.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.security.ClientUserRoleConstants;
 import ch.tbmelabs.serverconstants.security.ClientUserRoleEnum;
+import org.junit.Test;
 
 public class ClientUserRoleConstantsTest {
+
   @Test
   public void eurekaShouldEqualEnumAuthority() {
     assertThat(ClientUserRoleConstants.EUREKA_ENDPOINT)

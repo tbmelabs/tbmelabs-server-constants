@@ -1,8 +1,9 @@
 package ch.tbmelabs.serverconstants.test.oauth2;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.oauth2.ClientGrantTypeEnum;
+import org.junit.Test;
 
 public class ClientGrantTypeEnumTest {
 
@@ -14,7 +15,8 @@ public class ClientGrantTypeEnumTest {
     final Long id = Long.valueOf(1);
     final String name = "authorization_code";
 
-    assertThat(ClientGrantTypeEnum.AUTHORIZATION_CODE).hasFieldOrPropertyWithValue(ID_PROPERTY_NAME, id)
+    assertThat(ClientGrantTypeEnum.AUTHORIZATION_CODE)
+        .hasFieldOrPropertyWithValue(ID_PROPERTY_NAME, id)
         .hasFieldOrPropertyWithValue(NAME_PROPERTY_NAME, name);
 
     assertThat(ClientGrantTypeEnum.AUTHORIZATION_CODE.getId()).isEqualTo(id);

@@ -1,8 +1,9 @@
 package ch.tbmelabs.serverconstants.test.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
+
 import ch.tbmelabs.serverconstants.security.ClientUserRoleEnum;
+import org.junit.Test;
 
 public class ClientUserRoleEnumTest {
 
@@ -31,7 +32,8 @@ public class ClientUserRoleEnumTest {
     final String authority = "ACTUATOR";
     final String name = "Actuator-Endpoint-User";
 
-    assertThat(ClientUserRoleEnum.ACTUATOR_ENDPOINT).hasFieldOrPropertyWithValue(ID_PROPERTY_NAME, id)
+    assertThat(ClientUserRoleEnum.ACTUATOR_ENDPOINT)
+        .hasFieldOrPropertyWithValue(ID_PROPERTY_NAME, id)
         .hasFieldOrPropertyWithValue(AUTHORITY_PROPERTY_NAME, authority)
         .hasFieldOrPropertyWithValue(NAME_PROPERTY_NAME, name);
 
