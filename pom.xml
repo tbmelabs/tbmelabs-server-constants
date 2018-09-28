@@ -42,6 +42,7 @@
     </parent>
 
     <properties>
+        <!-- Sonar configuration -->
         <sonar.projectKey>server-constants</sonar.projectKey>
         <sonar.projectName>Server-Constants</sonar.projectName>
     </properties>
