@@ -26,8 +26,6 @@ deploy:
 
 env:
   global:
-    - secure: "DhlLatEVm+lx4N3+OnuRuZVufVmok1ByJOnANA5Q7kbh/tRWGBcUCQGp5jSFLAsHhO6Kxgun1G6TWWDcqbjbkCJ2U9AjoS7oUUQ94BzSI0yrYWsdTaKLuFwGNrU1aM3Q936Y2JSk3v6Tkkpjm2k2kInsZBGjgvPCLe5Sn6Lag6SitVhsMTUqB3nW+sIbIuaJWnM1W30adyHIWn9k3zWeEcIM6faNjyqe4bAOaH+6HqbDKMlnepPIfMRSiI9ACaOp21YLN9eQXZovG1h0lZhEYu73VMQmgPjiSk8X7FgC+eyQciHdU28E16JI0Ejwkuc9S6XF9NDFigfj9MPLYtqbrhKNWX7L5kMxqhWBhjyg0xKMA/zcLz8AZovmwiDI1iErJZQCw5le0p/HFmTs5o67oNAF077dkMbHJvbdogjLVnJA5NqTOMZYvJ3u1BPHwQUASFY9JYlmpXdLYbfGxp++Lrl44MmidxOaUKnbMN1EXLKzqWeI37MAokJZ862NY1FHEXcEJgQsnzapd9zgdq7zoP7MXDBZY4b/g/1O79g1/wLF2SsMH8A9W89uq1J532CIYR4EFjLpR33iwRWnSbwxRGW0N9NwBB+aG0qtPIaEI71lw4eqwWxFkbMe5Jf6d6+h3el3VS18NAXyNIJJ59Dhmrs7tbrrKJUh4eZu/aTZpIs="
-    # ^^ SONAR_TOKEN
     - secure: "b1lrwVLh+CJUzblf28WWDACv/GsQvjjfyu+nHyU37cpoZhMLrixh+q9uzE1uAK8Zh2SlWPAH1DKNccFSC9lf7gINcLebqDs442Rwi/o6N16LA8wvto0WGV/Ye+i+NiJfBYztOUMr4FA22BAfNxkAXjc3Hppp8oA8F90MwC+TeQHP9/vNPUbRCT6rOKKM+0oAIMqzQ65voRcTxx0rDEtig8YwFj7oN5U/SbfMi1GYWUb1MNG8RRg6qVahI0PFl7LmeJoTPdmoFv/8Lyqq2m7xcM6AQnVcY4U66331hlmHQfbRrh2ILuFpqp6rI9SuytD6U4X0/WuNa+k4/NhjdqpboX1ycNblJGOaG/PmTP7eGUDRcBO6xvhKprO+4o2ONHh1aVO/FUTDclEe6wtrwBiK7PyuIu0m1CZ3KfzQd5egEobwWUztEc4uhzy82YHABCKpcL9IVDD0l7BOAVoX+owUDfBmi+16lfAsmBLqBzUcRuS9MNLCHhoubh6l6SNB4eNa62PRIpo1m6HG1Mc43EL8nhRNSdgaZgsIQAaWXAMRO1qcsCIRqsXHeTIb77TStcOW8TUeLzWPDlaWtg/fSQB4lvZ3+XJY/VagWVAbNm3lscUwUMQaClfnRntiJEaQ5i0XT2HeZQs4Joaal8/nms8dPlDqFFwSbogxBpj6861Y/uM="
     # ^^ GITHUB_USERNAME
     - secure: "H/wYe8Inb1AWLl/sA2f+aQMP6M4AsmWJ+shwKwrjLJPwMQH5L9CK9h6dBwCu8nDR3ftDdwbI0rROEDFTLOmxW+/ZEr5h4CkYmXS2U4Goc40k+LuBLnqZ6EEn/L+xMou0T10wTECNat1Rb8F4qPceW0U7HwIaaviEQy+nrGQvFdtgjQ6Nbe9DfQh0L+C3SpVG+ICF22F2Pfq1hwD9zOPf9jIq/mtQ5hbQf/im1tvpmUKwEZkUJV8FRLMqks51gHfIFkacC+VOp6F+PwR2yVNtxPTT8ceZDStZ0SYU6D+/jI2qJu4tOXqI/gI2qBQPCbKl3LWUyLCyRktH8jPge2TQjKo8aAmErC2kdcxhzAXtbKZKCP4ImSNcPITdTRcdLyOlZR3yD2nGHFZwgkB0XwAB6kZwR6NGCup9u0jUK0bDd1Qbk9vGUSe22nHLhyt51u+MNOL8iseTbqa/xOzvDIwn2KgJyRdMUQKzQeanvXv6SXla6dxsQTUc8nmKUzh0nhSJLilbsn7MRDNDc9Wi4EqSxBJH99bmAH4Ke556tBLAOrQgZl1v3fOXr7/YLZLyJGJf72AC0YOgP7+Xe8Ft2IGq042j/aJkG56X4Bn3+fIcrJdFH+DqINPFiIWfECyS1s3JMrXDifAKfZmT8YwpxUopgeqSCVyqpcbueVN9ghuXhEs="
@@ -45,7 +43,7 @@ addons:
   sonarcloud:
     organization: "tbmelabs-github"
     token:
-      secure: ${SONAR_TOKEN}
+      secure: "sAXUb/3G//Exc1uO8AaGjuT+Hg99SJVnp8sDw1Vr2HXEdqDCmsW1v72A2udkObOKb5FxFuwL9ZdIkBXnog4zDbYcn83rvU8/YCiBumFoQT3XwN+sJye9vQA7IXPCBptVeuTjV/0z+EXtgrLrxPKahPNW8olZsWylQQDSQumXyWdCA1TEIOOA2ryQEhOiOUrK5rk7o1arTUFZCPLdxiz8rZ/LovighQ/t3J7AFXzE8BJ8SLp4ImpNUWFPSuxyB+ir48cO7IUNC//LzRgVQx4Yhn/gGeRZ4bqN1Q0MeJYYQ7gPHrtzQdIkfIr4uvSRXlcE3R8yZBnS1dsFlX7ivy61zmiBmDNBbCULAhBCuKt0ieeV/pM3K0VtcD89taGnvqQw7/E/ralSMsoa/Gr160itkvVJKT9YA6xN6yf/4Cl1kwzpSxT/7e8rB/JGZHd0fIQA8+RiMIwgTUUP4HrjTQbaH1gxiSiQfFuNoYS76V3PHsCsQKiBnHqMz8Tll3EzQycd1axPW/vHKeoZxiLJjwu2eoeddNBgildi18jv7e94TSYHAAunLNMZOhrA0sdOcW6NKrK4tWA1a2gFIanV/+DxtnbmuYTs0/zSCB169gKd+oPnZlQK3t5yojP4s13ZAK+qIfmRR0DruIBsETgv6ydDYMzNQLWAUvbXlCLVJSm8UIM="
 
 before_script:
   - git clone https://${GITHUB_USERNAME}:${GITHUB_ACCESS_TOKEN}@github.com/mirioeggmann/tbmelabs-deploy-certificates.git
@@ -53,8 +51,7 @@ before_script:
   - cp .travis.settings.xml $HOME/.m2/settings.xml
 
 script:
-  # - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-  - mvn clean verify
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 after_script:
   - rm -rf tbmelabs-deploy-certificates

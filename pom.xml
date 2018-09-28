@@ -41,6 +41,11 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <sonar.projectKey>server-constants</sonar.projectKey>
+        <sonar.projectName>Server-Constants</sonar.projectName>
+    </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
         <dependency>
