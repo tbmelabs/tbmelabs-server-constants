@@ -3,7 +3,7 @@ package ch.tbmelabs.serverconstants.test.security;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import ch.tbmelabs.serverconstants.security.UserRoleEnum;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class UserRoleEnumTest {
 
