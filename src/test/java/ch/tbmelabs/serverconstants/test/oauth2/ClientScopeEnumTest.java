@@ -3,7 +3,7 @@ package ch.tbmelabs.serverconstants.test.oauth2;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import ch.tbmelabs.serverconstants.oauth2.ClientScopeEnum;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class ClientScopeEnumTest {
 
