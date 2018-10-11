@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import ch.tbmelabs.serverconstants.security.UserRoleConstants;
 import ch.tbmelabs.serverconstants.security.UserRoleEnum;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class UserRoleConstantsTest {
 

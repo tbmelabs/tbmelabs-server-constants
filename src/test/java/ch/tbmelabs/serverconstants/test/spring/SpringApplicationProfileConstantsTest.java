@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import ch.tbmelabs.serverconstants.spring.SpringApplicationProfileConstants;
 import ch.tbmelabs.serverconstants.spring.SpringApplicationProfileEnum;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class SpringApplicationProfileConstantsTest {
 
