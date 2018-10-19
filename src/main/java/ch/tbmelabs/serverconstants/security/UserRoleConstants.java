@@ -1,6 +1,6 @@
-package ch.tbmelabs.tv.constants.security;
+package ch.tbmelabs.serverconstants.security;
 
-public class UserRole {
+public class UserRoleConstants {
 
   public static final String GANDALF = "GANDALF";
   public static final String SERVER_ADMIN = "SERVER_ADMIN";
@@ -11,8 +11,4 @@ public class UserRole {
   public static final String USER = "USER";
   public static final String GUEST = "GUEST";
   public static final String ANONYMOUS = "ANONYMOUS";
-
-  private UserRole() {
-    // Hidden constructor
-  }
 }

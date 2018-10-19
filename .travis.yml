@@ -1,7 +1,7 @@
 language: java
 dist: trusty
 jdk:
-  - oraclejdk8
+  - openjdk11
 
 sudo: false
 install: true
@@ -15,19 +15,46 @@ branches:
   - development
 
 deploy:
-  provider: script
-  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && ./scripts/deploy.sh"
-  skip_cleanup: true
+  - provider: script
+    script: bash scripts/deploy.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash scripts/deploy-snapshot.sh
+    on:
+      branch: development
+
+env:
+  global:
+    - secure: "b1lrwVLh+CJUzblf28WWDACv/GsQvjjfyu+nHyU37cpoZhMLrixh+q9uzE1uAK8Zh2SlWPAH1DKNccFSC9lf7gINcLebqDs442Rwi/o6N16LA8wvto0WGV/Ye+i+NiJfBYztOUMr4FA22BAfNxkAXjc3Hppp8oA8F90MwC+TeQHP9/vNPUbRCT6rOKKM+0oAIMqzQ65voRcTxx0rDEtig8YwFj7oN5U/SbfMi1GYWUb1MNG8RRg6qVahI0PFl7LmeJoTPdmoFv/8Lyqq2m7xcM6AQnVcY4U66331hlmHQfbRrh2ILuFpqp6rI9SuytD6U4X0/WuNa+k4/NhjdqpboX1ycNblJGOaG/PmTP7eGUDRcBO6xvhKprO+4o2ONHh1aVO/FUTDclEe6wtrwBiK7PyuIu0m1CZ3KfzQd5egEobwWUztEc4uhzy82YHABCKpcL9IVDD0l7BOAVoX+owUDfBmi+16lfAsmBLqBzUcRuS9MNLCHhoubh6l6SNB4eNa62PRIpo1m6HG1Mc43EL8nhRNSdgaZgsIQAaWXAMRO1qcsCIRqsXHeTIb77TStcOW8TUeLzWPDlaWtg/fSQB4lvZ3+XJY/VagWVAbNm3lscUwUMQaClfnRntiJEaQ5i0XT2HeZQs4Joaal8/nms8dPlDqFFwSbogxBpj6861Y/uM="
+    # ^^ GITHUB_USERNAME
+    - secure: "H/wYe8Inb1AWLl/sA2f+aQMP6M4AsmWJ+shwKwrjLJPwMQH5L9CK9h6dBwCu8nDR3ftDdwbI0rROEDFTLOmxW+/ZEr5h4CkYmXS2U4Goc40k+LuBLnqZ6EEn/L+xMou0T10wTECNat1Rb8F4qPceW0U7HwIaaviEQy+nrGQvFdtgjQ6Nbe9DfQh0L+C3SpVG+ICF22F2Pfq1hwD9zOPf9jIq/mtQ5hbQf/im1tvpmUKwEZkUJV8FRLMqks51gHfIFkacC+VOp6F+PwR2yVNtxPTT8ceZDStZ0SYU6D+/jI2qJu4tOXqI/gI2qBQPCbKl3LWUyLCyRktH8jPge2TQjKo8aAmErC2kdcxhzAXtbKZKCP4ImSNcPITdTRcdLyOlZR3yD2nGHFZwgkB0XwAB6kZwR6NGCup9u0jUK0bDd1Qbk9vGUSe22nHLhyt51u+MNOL8iseTbqa/xOzvDIwn2KgJyRdMUQKzQeanvXv6SXla6dxsQTUc8nmKUzh0nhSJLilbsn7MRDNDc9Wi4EqSxBJH99bmAH4Ke556tBLAOrQgZl1v3fOXr7/YLZLyJGJf72AC0YOgP7+Xe8Ft2IGq042j/aJkG56X4Bn3+fIcrJdFH+DqINPFiIWfECyS1s3JMrXDifAKfZmT8YwpxUopgeqSCVyqpcbueVN9ghuXhEs="
+    # ^^ GITHUB_ACCESS_TOKEN
+    - secure: "ewGW9/mxapmGKCgEeDqFdsMtbYgvf2/LxOS2GTzhFOsMLgvRkE6XE/cthjWeZGK6j8lcf1hWw5IWL7vkrzO2Yoi9RionLKJs7RWSCxlPLv+LHS1v6Eh+7raCD0ZWtj7WQDKACqOD3QZxCrKG4DTTHZrAKMrZZ8tmy8b16lx6sAIkDV7q0D2FHlM4uh5jpA+ntBQDAAtrka401sav4ruZmEHh4RBlrMCTfAFPedKLMR/AjLGWHg8kRkQ/Gy5jnztW4vukpPTvE7XXdlSYxmZ93vIMxF3tdDIta6xx+b9RaKeuzxea/J7ayRqCm5T7A3GdVu7tf9K2wOtBo1pmaUfPvbyr4Zj8S7H+Ntw61NJlvoy0C96fZA12LCjc+c1ey758BzYCuNI8izN9TQ96cd8MrwSw5wdgKG0Lfizt3UF0O4v7VpSQ6HAWPvJbYnSUtwWmVGgmDBNrqSaZDyQi989ulugoOb2P3W525ny/ks4UDx2+v1M4VrS7FXM6ho4QzOKNCcd9qWrY4RrTyG1OZjhKhVieI1hItQKA0bHqCofaSD/y7CDFWNoO+cNNqoGgdSMLFBGstEV6UgItn6uBYjlfV19CoLYfRAEXBsQvbJgtoOd3JaPBZMeB1kBxCfHia1NQpke3csFobzrUiE8ekk4bk74AQ+MlcyLYCWlaSS5KNcU="
+    # ^^ OSSRH_JIRA_USERNAME
+    - secure: "tC1DiWAcIpiuedA6rLnnqw9iSV4HGRjTc62ZCJLF4VUknffbx62nwHBmsF5bpF3UIjWFEbfjrR1sEBikcohPX5Broqbsvg+v5Luir5geg5UesayFRLerroGECvVxZYFODKNWTL/It72k5pr3uPG5vVct5ziOhgT8D+LROJBf30mRMSevXxDexA8GKYFKlxH7L75k0pnXI+0rhAKqhFXmHQYzngqMKJSab8YHELUbFXJSmfT7otAanZ+BRvmi4Dv+r45a9Y+iRuL+Y6SadFxnSNPAtDjFV2uhOw/0uMhaHuKJqYE5fwLkHb0ChPHHWE/HiERRnENrQih+rZB5L0YKQ7QWeCP8DBxOWd3hfctcckEi+5ZPUNh9uIy9+pEJoY+TlIFuxe6xvj+b7ftWXuxhE/pVmJxx6Fa6z+dDv0a0PBY0jn6Tom5sRMK0FdJ0OIHanp28dvnwqbYGMgfeUZC4sqbss2iYQEYcJNU8/5fD5LvEEKASkb02aMB6pJ9HzVO05oa4yKMIohfPQGFBtJPpxbkD4FmfGXU4sJHnhUKGc0iycN4IYJdXmAXrG5k8GDpWm4Ts4PY0BACqmUyDHu8WiS3CFM+ujrrHvp2nsqghuRwIje/kR30Q2HHR5XxeJ+DzQJX2C4yTj8kPSl4OBfvZ2XIoCM6AE+BfK9JOxpmV8BM="
+    # ^^ OSSRH_JIRA_PASSWORD
+    - secure: "GjfWbvn0zrnSbFdP175pP7vz2FiYS0Kq0yXmo54oUAf2VDBCIRWxC6AmFRWOmH/IpPEIJIrJvGokSk+C2FxEXAoi+i3DRovSjQSReF2GQBh591JdJTKqHEIbJiAxgm6rj/5mVwuSdqlaRIK8MFD50cKS7c5k0sHvQ13qASUgVEcF2JIb9+S7g4Gr6GxllPRiuek4aDTtYyjcMLjrpMDhiy/3b9JJ55hSnJrLskNrt2DmQ0MZ/ganwmZzVeSup97LoUVwofwfCj4+HTUT5QuD4oXAkTOJMrrnJeqXYysV7JaTglUCayPhsaU7w7xPqWzgPaXVS6pTbUugWG5/XGI1azbz4OzwRzI3OcPsWLq1mdF1Vf0lvXNSoeGt+trLdIeZavrt2u1a1lxyY3xicEl1VdzZO5wPTbVuEuiHPQfMOgREavpdRBS6nYGxWrBr+dHZyd5R8Q/7RmiALHZhHHRR+AMuTSoq55xhXKjBamPDBTzdzjQSJH0deY7WGkQHQosiqcs1vWpfH6TkkxXwQfPCx5y1XvppBKV0+W60Ker2Ye7L2IL4Zg1hTG75fnjk/pDWKHlZaVpQx1WVOdaUf9vvfPHy/aHCm5iCZelGIkdyw5CFVRqUzl29Sf2f332V/WwXnaczYv5s41J6Lx2TALBH5qzSm9sDPrDP+jHbgNZ8GuE="
+    # ^^ GPG_KEY_NAME
+    - secure: "o8AoDyKp5omsv+VtRDU3Upcs35Fhf0D6dJ7JNiyrwnQqBddYUdDUNWeb/RhhXUBBTDhNHa9RphxjBAsDtr5TGPQ69e49I4j9jV/rI2y1WRLbVO6LADzZAbO2nqs4VlXSedLOFv74ohkI7lHdsm/jJMPv8Lle2IaAUZNaX8HyrgkxLfkkvzKfwjEF1TUtIUCYMPabLD2s7OyFkoNsqJ2UxA/0ewdCzNd3qjNijjqaX0O1QmfeMeG5JC5Ir8npGqe5a4pVlEj56Z0ebGTsxJfMcMewZRS5ywIM9RY0cg8It87UVaWbnfmLCPKNQgl2MwsJoNeRPGxDCo8qYa4sDJj7Ibd+H/0Y8SVaNTeh9HjQDbZX092R9kFL9w+mFgIgJxHjznbfxKzSdM3R+ZrTDj8aIRqeVXTNGpsuHiXIrWmEuQWmrQvIek2dTtZNNrN5WcdtibJMoRdXv6l4twMfEWiz8BAu4TSULEar6FjJt1ScCh+FaftYXN1MexZwbgq2bsCLH71MIG1ePZm270rAbvZCD10DAwvsRO/RcOOZui6i3Fe263F4IgOViOwLblRnWwSBAW1gAF6WerDDWU9fQMKaFEqSFq95v6LiJKlZSe2IbBZNK17G6Odo9HqOFFP/fqk2nq2bkQUP58Ank2tzsIhSjMW7oyiOn9V7EaTh8FBAXEU="
+    # ^^ GPG_PASSPHRASE
 
 addons:
   sonarcloud:
     organization: "tbmelabs-github"
     token:
-      secure: ${SONAR_TOKEN}
+      secure: "sAXUb/3G//Exc1uO8AaGjuT+Hg99SJVnp8sDw1Vr2HXEdqDCmsW1v72A2udkObOKb5FxFuwL9ZdIkBXnog4zDbYcn83rvU8/YCiBumFoQT3XwN+sJye9vQA7IXPCBptVeuTjV/0z+EXtgrLrxPKahPNW8olZsWylQQDSQumXyWdCA1TEIOOA2ryQEhOiOUrK5rk7o1arTUFZCPLdxiz8rZ/LovighQ/t3J7AFXzE8BJ8SLp4ImpNUWFPSuxyB+ir48cO7IUNC//LzRgVQx4Yhn/gGeRZ4bqN1Q0MeJYYQ7gPHrtzQdIkfIr4uvSRXlcE3R8yZBnS1dsFlX7ivy61zmiBmDNBbCULAhBCuKt0ieeV/pM3K0VtcD89taGnvqQw7/E/ralSMsoa/Gr160itkvVJKT9YA6xN6yf/4Cl1kwzpSxT/7e8rB/JGZHd0fIQA8+RiMIwgTUUP4HrjTQbaH1gxiSiQfFuNoYS76V3PHsCsQKiBnHqMz8Tll3EzQycd1axPW/vHKeoZxiLJjwu2eoeddNBgildi18jv7e94TSYHAAunLNMZOhrA0sdOcW6NKrK4tWA1a2gFIanV/+DxtnbmuYTs0/zSCB169gKd+oPnZlQK3t5yojP4s13ZAK+qIfmRR0DruIBsETgv6ydDYMzNQLWAUvbXlCLVJSm8UIM="
+
+before_script:
+  - git clone https://${GITHUB_USERNAME}:${GITHUB_ACCESS_TOKEN}@github.com/mirioeggmann/tbmelabs-deploy-certificates.git
+  - gpg --fast-import tbmelabs-deploy-certificates/tbmelabs-deploy-key.asc
+  - cp .travis.settings.xml $HOME/.m2/settings.xml
 
 script:
-#  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-  - mvn clean install
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
+after_script:
+  - rm -rf tbmelabs-deploy-certificates
 
 cache:
   directories:
